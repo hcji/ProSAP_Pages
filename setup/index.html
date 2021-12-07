@@ -42,6 +42,9 @@
                             <li class="navitem">
                                 <a href="../features/" class="nav-link">User Guide</a>
                             </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">About</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -177,10 +180,18 @@ Please follow the video of the installation at <a href="https://github.com/hcji/
 </li>
 </ol>
 <h2 id="macos-with-m1-chip">MacOS with M1 chip</h2>
-<p>If you are using MacBook Pro with M1 chip, you should install <a href="https://machow2.com/rosetta-mac/">Rosetta</a> first.  <br />
-Then, you should install <a href="https://www.r-project.org/">R</a> of <strong>High Sierra version</strong> (Inter 64 based). This is because rpy2 has not support ARM64 based R yet. 
-We will update if rpy2 support it in the future.<br />
-Next, you can follow the same step 1 ~ step 5 of MacOS.  </p>
+<ol>
+<li>
+<p>If you are using MacBook Pro with M1 chip, you should firstly install <a href="https://machow2.com/rosetta-mac/">Rosetta</a>.    </p>
+<pre><code>softwareupdate --install-rosetta --agree-to-license
+</code></pre>
+</li>
+<li>
+<p>Install <a href="https://www.r-project.org/">R</a> of <strong>High Sierra version</strong> (Inter 64 based). This is because rpy2 has not support ARM64 based R yet. 
+We will update if rpy2 support it in the future.  </p>
+</li>
+<li>Follow the same step 1 ~ step 5 of MacOS.  </li>
+</ol>
 <p><strong>Note:</strong> ProSAP has been test on Windows 7, Windows 10, Windows 11, Ubuntu 20.04 and MacOS 11.6.1. However, it does not work on Windows XP.</p>
 <h1 id="development-version">Development version</h1>
 <h2 id="windows-or-macos">Windows or MacOS</h2>
