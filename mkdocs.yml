@@ -1,0 +1,7 @@
+site_name: ProSAP
+site_url: https://example.com/
+nav:
+    - Home: index.md
+    - Installation: setup.md
+    - User Guide: features.md
+    
