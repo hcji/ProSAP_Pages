@@ -75,7 +75,6 @@ We will update if rpy2 support it in the future.
         conda create -n ProSAP python=3.8
         conda activate ProSAP
 
-**Note:** MacBook Pro with **M1** chip may need python=3.9 and make sure R version is suitable.
 4. Clone the repository and enter:  
 
         git clone https://github.com/hcji/ProSAP.git
@@ -94,7 +93,9 @@ We will update if rpy2 support it in the future.
         pyinstaller ProSAP.py -i ./img/ProSAP.ico --hidden-import=“sklearn.utils._weight_vector” 
         cd dist/ProSAP
         ProSAP.exe
-        
+
+**Note:** MacBook Pro with **M1** chip may use **High Sierra version** of R and install **rosetta**.
+
 ## Linux
 1. Most Linux distributions have included git and conda, but you may need install extra dependency of QT:  
 
