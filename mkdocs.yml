@@ -4,4 +4,4 @@ nav:
     - Home: index.md
     - Installation: setup.md
     - User Guide: features.md
-    
+    - About: about.md

@@ -53,10 +53,13 @@ Please follow the following installation steps and refer the video of the instal
 
 
 ## MacOS with M1 chip
-If you are using MacBook Pro with M1 chip, you should install [Rosetta](https://machow2.com/rosetta-mac/) first.    
-Then, you should install [R](https://www.r-project.org/) of **High Sierra version** (Inter 64 based). This is because rpy2 has not support ARM64 based R yet. 
+1. If you are using MacBook Pro with M1 chip, you should firstly install [Rosetta](https://machow2.com/rosetta-mac/).    
+
+        softwareupdate --install-rosetta --agree-to-license
+
+2. Install [R](https://www.r-project.org/) of **High Sierra version** (Inter 64 based). This is because rpy2 has not support ARM64 based R yet. 
 We will update if rpy2 support it in the future.  
-Next, you can follow the same step 1 ~ step 5 of MacOS.  
+3. Follow the same step 1 ~ step 5 of MacOS.  
 
 
 **Note:** ProSAP has been test on Windows 7, Windows 10, Windows 11, Ubuntu 20.04 and MacOS 11.6.1. However, it does not work on Windows XP.
