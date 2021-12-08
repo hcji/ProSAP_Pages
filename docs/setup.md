@@ -2,9 +2,9 @@
 
 **Download Link:**
 
-Windows: [ProSAP-0.99.4-Windows.zip](https://zenodo.org/record/5529497/files/ProSAP-0.99.4-Windows.zip?download=1)    
-Linux: [ProSAP-0.99.4-Linux.tar.xz](https://zenodo.org/record/5529497/files/ProSAP-0.99.4-Linux.tar.xz?download=1)    
-MacOS: [ProSAP-0.99.4-Mac.zip](https://zenodo.org/record/5529497/files/ProSAP-0.99.4-Mac.zip?download=1)
+Windows: [ProSAP-0.99.5b-Windows.zip](https://zenodo.org/record/5763315/files/ProSAP-0.99.5b-Windows.zip)    
+Linux: [ProSAP-0.99.5b-Linux.tar.xz](https://zenodo.org/record/5763315/files/ProSAP-0.99.5b-Linux.tar.xz)    
+MacOS: [ProSAP-0.99.5b-Mac.zip](https://zenodo.org/record/5763315/files/ProSAP-0.99.5b-Mac.zip)
 
 ## Windows 
 The installer version should be preferred but might require administrator permissions. 
