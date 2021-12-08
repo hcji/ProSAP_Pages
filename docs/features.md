@@ -125,7 +125,7 @@ TPCA is an analysis method of coaggregation of proteins based on TPP experiments
 
 6. The protein complex will be sorted by the changing significance, using p-value as numerical description
 
-7. View and save the results. The melting curve of proteins can be visulized by clicking the 'Show Curve' button.
+7. View and save the results. The melting curves of proteins can be visulized by clicking the 'Show Curve' button.
 
 8. If you want to calculate protein pair dynamic changing and/or evaluate the prediction performance of
  PPI, just click 'Analysis' menu, and select 'Protein pair analysis'
@@ -137,9 +137,17 @@ TPCA is an analysis method of coaggregation of proteins based on TPP experiments
  (including a vehicle control) at m temperatures. The additional drug concentration dimension
  of 2D-TPP enables more sensitive detection of off-target targets. The 2D-TPP analysis of ProSAP is implemented
  based on the R package proposed by Savitski et al.
+  [Video of example](https://github.com/hcji/ProSAP/blob/master/video/ProSAP_2D_TPP.mp4)
  
 <div align="left">
 <img src="feature_6.png" width="60%">
 </div>
 
+**Usage:**  
 
+1. Click 'Data' menu and load proteomics files. Please refer the column names of the example file.
+ [Example files](https://github.com/hcji/ProSAP/tree/master/data/TPP2D).
+
+2. Set the parameters, then click 'Confirm' button. The processing will take quite a long time, wait patiently.   
+
+3. View and save the results. The heatmaps of proteins can be visulized by clicking the 'Show Result' button.
