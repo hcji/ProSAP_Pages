@@ -6,6 +6,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://example.com/2D_TPP/</loc>
+         <lastmod>2021-12-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/PISA_ITSA/</loc>
+         <lastmod>2021-12-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/TPCA/</loc>
+         <lastmod>2021-12-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/TPP_NPA/</loc>
+         <lastmod>2021-12-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://example.com/about/</loc>
          <lastmod>2021-12-23</lastmod>
          <changefreq>daily</changefreq>

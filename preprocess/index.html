@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://example.com/preprocess/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Data Preprocessing - ProSAP</title>
+        <title>Preprocess - ProSAP</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -40,7 +40,32 @@
                                 <a href="../setup/" class="nav-link">Installation</a>
                             </li>
                             <li class="navitem">
-                                <a href="../features/" class="nav-link">User Guide</a>
+                                <a href="../features/" class="nav-link">Getting started</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Preprocess</a>
+</li>
+                                    
+<li>
+    <a href="../PISA_ITSA/" class="dropdown-item">PISA_ITSA</a>
+</li>
+                                    
+<li>
+    <a href="../TPP_NPA/" class="dropdown-item">TPP_NPA</a>
+</li>
+                                    
+<li>
+    <a href="../TPCA/" class="dropdown-item">TPCA</a>
+</li>
+                                    
+<li>
+    <a href="../2D_TPP/" class="dropdown-item">TPP-2D</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="../about/" class="nav-link">About</a>
@@ -53,6 +78,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../features/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../PISA_ITSA/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -78,6 +113,10 @@
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#parameters" class="nav-link">Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#display" class="nav-link">Display</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -109,7 +148,30 @@
  this number will be removed.</li>
 <li><em>Merging metrics</em>: If more than one files are input, how to combine the abundances
  of the same protein in different files. If onle one file is input, ignore this.</li>
-<li><em>Normlization</em>: </li>
+<li><em>Normalization</em>: Method for normalization. <em>Reference</em> means all the quantitative values 
+ are divided by the reference sample. This is usually used for the TPP analysis; <em>Median</em>
+ means normalize all the samples to the same median value. <em>None</em> means no normalization is
+ applied.</li>
+<li><em>Missing value imputation</em>: Method for impute missing values. <em>KNN</em> means the iterative <a href="https://academic.oup.com/bioinformatics/article/17/6/520/272365">KNN
+ method</a> for the imputation;
+ <em>Zero</em> means all the missing values to zero are replaced to zero; <em>None</em> means no imputation are
+ applied, which the protein group with missing values will be discarded in the following steps.
+ If TMT-labeled quantitative method is used in your experiment, <em>None</em> is recommonded. If label-free
+ quantitative method is used, <em>KNN</em> is recommonded.</li>
+<li><em>Missing value filter ratio</em>: The cut-off threshold for missing value. If the ratio of samples
+ with missing value are more than this value, the protein group will be discarded.</li>
+<li><em>RSD filter threshold</em>: If you have technical replicates, protein group with RSD over this threshold
+ will be discarded.</li>
+<li><em>Reference column</em>: If you are using <em>Reference</em> as normalization method, this is which column you are 
+ used as the reference.</li>
+</ul>
+<h2 id="display">Display</h2>
+<ul>
+<li><em>File list</em>: The input files for preprocessing. If you want to remove the files, please click the
+ <em>clear</em> button.</li>
+<li><em>Temperture</em>: The table used for input the tempertures corresponding to the samples.</li>
+<li><em>RSD distribution</em>: Density plot of the RSDs of the technical replicates.</li>
+<li><em>Data Viewer</em>: The output of the preprocessed data. Click <em>Save</em> to write to csv file.</li>
 </ul></div>
             </div>
         </div>
