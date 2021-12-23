@@ -29,8 +29,8 @@ If you are processing TPP datasets including temperture information, you should 
  method](https://academic.oup.com/bioinformatics/article/17/6/520/272365) for the imputation;
  *Zero* means all the missing values to zero are replaced to zero; *None* means no imputation are
  applied, which the protein group with missing values will be discarded in the following steps.
- If TMT-labeled quantitative method is used in your experiment, *None* is recommonded. If label-free
- quantitative method is used, *KNN* is recommonded.
+ If TMT-labeled quantitative method is used in your experiment, *None* is recommended. If label-free
+ quantitative method is used, *KNN* is recommended.
 - *Missing value filter ratio*: The cut-off threshold for missing value. If the ratio of samples
  with missing value are more than this value, the protein group will be discarded.
 - *RSD filter threshold*: If you have technical replicates, protein group with RSD over this threshold
