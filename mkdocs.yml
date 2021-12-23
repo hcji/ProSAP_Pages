@@ -3,7 +3,11 @@ site_url: https://example.com/
 nav:
     - Home: index.md
     - Installation: setup.md
-    - User Guide: features.md
-    # - Document: 
-        # Preprocess: preprocess.md
+    - Getting started: features.md
+    - Document: 
+        Preprocess: preprocess.md
+        PISA_ITSA: PISA_ITSA.md
+        TPP_NPA: TPP_NPA.md
+        TPCA: TPCA.md
+        TPP-2D: 2D_TPP.md
     - About: about.md

@@ -21,7 +21,33 @@ If you are processing TPP datasets including temperture information, you should 
  this number will be removed.
 - *Merging metrics*: If more than one files are input, how to combine the abundances
  of the same protein in different files. If onle one file is input, ignore this.
-- *Normlization*: 
+- *Normalization*: Method for normalization. *Reference* means all the quantitative values 
+ are divided by the reference sample. This is usually used for the TPP analysis; *Median*
+ means normalize all the samples to the same median value. *None* means no normalization is
+ applied.
+- *Missing value imputation*: Method for impute missing values. *KNN* means the iterative [KNN
+ method](https://academic.oup.com/bioinformatics/article/17/6/520/272365) for the imputation;
+ *Zero* means all the missing values to zero are replaced to zero; *None* means no imputation are
+ applied, which the protein group with missing values will be discarded in the following steps.
+ If TMT-labeled quantitative method is used in your experiment, *None* is recommonded. If label-free
+ quantitative method is used, *KNN* is recommonded.
+- *Missing value filter ratio*: The cut-off threshold for missing value. If the ratio of samples
+ with missing value are more than this value, the protein group will be discarded.
+- *RSD filter threshold*: If you have technical replicates, protein group with RSD over this threshold
+ will be discarded.
+- *Reference column*: If you are using *Reference* as normalization method, this is which column you are 
+ used as the reference.
+ 
+ 
+## Display
+- *File list*: The input files for preprocessing. If you want to remove the files, please click the
+ *clear* button.
+- *Temperture*: The table used for input the tempertures corresponding to the samples.
+- *RSD distribution*: Density plot of the RSDs of the technical replicates.
+- *Data Viewer*: The output of the preprocessed data. Click *Save* to write to csv file.
+ 
+ 
+ 
 
 
 
