@@ -84,6 +84,10 @@ The workflow of TPP analysis is implemented under the Savitski protocol. Nonpara
  into melting curve, respectively. Various kinds of distance functions, such as Euclidean,
  Cityblock, Chebychev or cosine function.
  [Video of example](https://github.com/hcji/ProSAP/blob/master/video/ProSAP_TPP.mp4)
+ 
+<div align="left">
+<img src="feature_3.png" width="60%">
+</div>
 
 **Usage:**  
 
@@ -107,6 +111,10 @@ TPCA is an analysis method of coaggregation of proteins based on TPP experiments
  protein pair prediction.Moreover ProSAP also calculate p value for sorting the protein
  complex in database, which assists users to find which protein complex changes most significantly.
  [Video of example](https://github.com/hcji/ProSAP/blob/master/video/ProSAP_TPCA.mp4)
+ 
+<div align="left">
+<img src="feature_4.png" width="60%">
+</div>
 
 **Usage:**  
 
