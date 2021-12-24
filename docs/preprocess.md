@@ -46,10 +46,3 @@ If you are processing TPP datasets including temperture information, you should 
 - *RSD distribution*: Density plot of the RSDs of the technical replicates.
 - *Data Viewer*: The output of the preprocessed data. Click *Save* to write to csv file.
  
- 
- 
-
-
-
-
-

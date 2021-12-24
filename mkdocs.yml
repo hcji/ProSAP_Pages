@@ -6,8 +6,8 @@ nav:
     - Getting started: features.md
     - Document: 
         Preprocess: preprocess.md
-        PISA_ITSA: PISA_ITSA.md
-        TPP_NPA: TPP_NPA.md
-        TPCA: TPCA.md
-        TPP-2D: 2D_TPP.md
+        PISA and iTSA analysis: PISA_ITSA.md
+        TPP and NPA analysis: TPP_NPA.md
+        TPCA analysis: TPCA.md
+        TPP-2D analysis: 2D_TPP.md
     - About: about.md
