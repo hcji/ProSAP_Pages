@@ -8,7 +8,7 @@
         
         <link rel="canonical" href="https://example.com/TPP_NPA/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>TPP_NPA - ProSAP</title>
+        <title>TPP and NPA analysis - ProSAP</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -51,19 +51,19 @@
 </li>
                                     
 <li>
-    <a href="../PISA_ITSA/" class="dropdown-item">PISA_ITSA</a>
+    <a href="../PISA_ITSA/" class="dropdown-item">PISA and iTSA analysis</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">TPP_NPA</a>
+    <a href="./" class="dropdown-item active">TPP and NPA analysis</a>
 </li>
                                     
 <li>
-    <a href="../TPCA/" class="dropdown-item">TPCA</a>
+    <a href="../TPCA/" class="dropdown-item">TPCA analysis</a>
 </li>
                                     
 <li>
-    <a href="../2D_TPP/" class="dropdown-item">TPP-2D</a>
+    <a href="../2D_TPP/" class="dropdown-item">TPP-2D analysis</a>
 </li>
                                 </ul>
                             </li>
@@ -112,6 +112,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#parameters" class="nav-link">Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -125,8 +129,58 @@
  multiple files in the same time. Then, please appoint each file as <em>case sample #1</em>, 
  <em>control sample #1</em>, <em>case sample #2</em>, <em>control sample #2</em>. The last two of them are 
  not compulsory. However, experimental replicates are highly recommended for reducing
- the false positive.</p>
-<p><strong>In developing</strong> </p></div>
+ the false positive. </p>
+<p>After input, you can check and adjust the parameters with clicking the <em>Params</em> button.
+ Then, select a statistical method for preprocessing the uploaded data with the <em>Analysis</em>
+ menu. There are three methods for choosing: TPP method, NPARC method and Distance based
+ method. </p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="tpp-method">TPP method</h3>
+<p>The workflow of TPP analysis is implemented as described in the Savitski protocol. See the
+ <a href="https://www.nature.com/articles/nprot.2015.101">reference</a> for the details. The parameters
+ includes:</p>
+<ul>
+<li><em>Min R2</em>: The threshold of the goodness-of-fit of the melting culve fitting. Default: 0.8</li>
+<li><em>H-Axis</em>: The threshold of how much protein is precipitated for calculating the Tm. Default: 0.5</li>
+<li><em>Max Plateau</em>: Plateau (lower horizontal asymptote) of the fitted melting curve under the given condition. Default: 0.3</li>
+<li><em>Replicate Check</em>: Whether to use the filtering criteria based on the replicates:<br />
+ (1) One of the P values for the two replicate experiments &lt; <em>p value threshold #1</em> and the other one <em>p value threshold #2</em><br />
+ (2) The coefficient of determination R2 are over the user-defined thresholds.<br />
+ (3) The minimum slope in each of the control versus treatment experiments is lower than user-defined thresholds.<br />
+ (4) The melting point shifts in the vehicle versus treatment experiments have the same direction.<br />
+ (5) Both melting point differences in the two pairs of control versus treatment experiments are greater than the melting point difference between the two vehicle controls.  </li>
+<li><em>Min Slope</em>: Slope threshold of the fitted melting curve at the inflection point under the given condition</li>
+</ul>
+<div align="center">
+<img src="melting_curve.png" width="60%">
+</div>
+
+<h3 id="nparc-method">NPARC method</h3>
+<p>The workflow of NPARC analysis is implemented as described in the Dorothee Childs's paper. See the
+ <a href="https://linkinghub.elsevier.com/retrieve/pii/S1535947620316522">reference</a> for the details. The parameters
+ includes:</p>
+<ul>
+<li><em>Min Null R2</em>: The threshold of the goodness-of-fit of the <em>Null model</em>. Default: 0.8</li>
+<li><em>Min Alt R2</em>: The threshold of the goodness-of-fit of the <em>Alternative model</em>. Default: 0.8</li>
+<li><em>Max Plateau</em>: Plateau (lower horizontal asymptote) of the fitted melting curve under the given condition. Default: 0.3</li>
+</ul>
+<div align="center">
+<img src="nparc_curve.png" width="60%">
+</div>
+
+<h3 id="distance-method">Distance method</h3>
+<p>Distance based model is more straightforward. The relative fold changes of each protein of case and
+ control groups are fitted into melting curves, respectively. The distance of the protein between
+ case and control group is calculated for evaluating the changing of the thermal stability. The
+ parameters includes:</p>
+<ul>
+<li><em>Metrics</em>: Which function is used for calculating the distance.</li>
+<li><em>Min R2</em>: The threshold of the goodness-of-fit of the melting culve fitting. Default: 0.8</li>
+<li><em>Max Plateau</em>: Plateau (lower horizontal asymptote) of the fitted melting curve under the given condition. Default: 0.3</li>
+</ul>
+<div align="center">
+<img src="distance_function.png" width="35%">
+</div></div>
             </div>
         </div>
 
