@@ -11,3 +11,6 @@ nav:
         TPCA analysis: TPCA.md
         TPP-2D analysis: 2D_TPP.md
     - About: about.md
+    
+extra_javascript:
+    - 'js/baidu-tongji.js'    

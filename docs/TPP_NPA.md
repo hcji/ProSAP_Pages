@@ -60,3 +60,28 @@ Distance based model is more straightforward. The relative fold changes of each 
 <div align="center">
 <img src="distance_function.png" width="35%">
 </div>
+
+
+## Display
+- *Replicate #1 Protein Table*: The quantitative table of the protein groups of the uploaded *Replicate #1*.
+- *Replicate #2 Protein Table*: The quantitative table of the protein groups of the uploaded *Replicate #2*.
+- *Result table*: The output of the preprocessing results. Click *Save* to write to csv file. The explaination of the columns:
+    *Score*:
+    *Rep1pVal (-log10)*: 
+    *Rep1delta_Tm*: 
+    *Rep1Group1_R2*: 
+    *Rep1Group2_R2*: 
+    *Rep1Group1_Tm*: 
+    *Rep1Group2_Tm*: 
+    *Rep1min_Slope*: 
+    *Rep2pVal (-log10)*: 
+    *Rep2delta_Tm*: 
+    *Rep2Group1_R2*: 
+    *Rep2Group2_R2*: 
+    *Rep2Group1_Tm*: 
+    *Rep2Group2_Tm*: 
+    *Rep2min_Slope*: 
+
+
+
+

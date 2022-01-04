@@ -43,3 +43,4 @@ v 0.99.2
 * Hongchao Ji, Xue Lu, Zhenxiang Zheng, Siyuan Sun, Chris Song Heng Tan*, 
 ProSAP: A GUI Software Tool for Statistical Analysis and Assessment of Thermal Stability Data，
 Briefings in Bioinformation, In Revision.
+
