@@ -12,6 +12,18 @@ After input, you can check and adjust the parameters with clicking the *Params* 
  menu. There are three methods for choosing: TPP method, NPARC method and Distance based
  method. 
  
+Each data table of the input should include the following columns: 
+ 
+- *Accession*: This column is necessary, which is the ID of the protein. It can be uniprot id
+ or/plus gene name or anything else.  
+- *Tx*: These columns should include the relative abundances of each protein. The abundances are
+ normalized by dividing the abundances under 37 C. The *x* in the column name should be replaced 
+ with the temperture, which can be integer or float.   
+
+If there are values much higher than 1 in your input table, there will be a warning reminding
+ you that the data may be un-normlized. If you are sure that you did, ignore it.
+
+ 
 ## Parameters
 
 ### TPP method
@@ -66,22 +78,22 @@ Distance based model is more straightforward. The relative fold changes of each 
 - *Replicate #1 Protein Table*: The quantitative table of the protein groups of the uploaded *Replicate #1*.
 - *Replicate #2 Protein Table*: The quantitative table of the protein groups of the uploaded *Replicate #2*.
 - *Result table*: The output of the preprocessing results. Click *Save* to write to csv file. The explaination of the columns:
-    *Score*:
-    *Rep1pVal (-log10)*: 
-    *Rep1delta_Tm*: 
-    *Rep1Group1_R2*: 
-    *Rep1Group2_R2*: 
-    *Rep1Group1_Tm*: 
-    *Rep1Group2_Tm*: 
-    *Rep1min_Slope*: 
-    *Rep2pVal (-log10)*: 
-    *Rep2delta_Tm*: 
-    *Rep2Group1_R2*: 
-    *Rep2Group2_R2*: 
-    *Rep2Group1_Tm*: 
-    *Rep2Group2_Tm*: 
-    *Rep2min_Slope*: 
-
+    - *Score*: The harmonized score combining both the significance (p-value) and the goodness-of-fit (R2).   
+    - *Rep1pVal (-log10)*: -log10 p-value of the ΔTm (TPP) or other distance metrics (NPA) of the *Replicate #1*.  
+    - *Rep1delta_Tm*: Calculated ΔTm of the the *Replicate #1* (TPP only).  
+    - *Rep1Group1_R2*: Goodness-of-fit of the melting curve of the first group (control) of the *Replicate #1*.  
+    - *Rep1Group2_R2*: Goodness-of-fit of the melting curve of the second group (case) of the *Replicate #1*.  
+    - *Rep1Group1_Tm*: Calculated Tm of the melting curve of the first group (control) of the *Replicate #1* (TPP only).  
+    - *Rep1Group2_Tm*: Calculated Tm of the melting curve of the second group (case) of the *Replicate #1* (TPP only).   
+    - *Rep1min_Slope*: The minimum slope of the fitted melting curve of the *Replicate #1* (TPP only).  
+    - *Rep2pVal (-log10)*: -log10 p-value of the ΔTm (TPP) or other distance metrics (NPA) of the *Replicate #1*.  
+    - *Rep2delta_Tm*: Calculated ΔTm of the the *Replicate #2* (TPP only).  
+    - *Rep2Group1_R2*: Goodness-of-fit of the melting curve of the first group (control) of the *Replicate #2*.  
+    - *Rep2Group2_R2*: Goodness-of-fit of the melting curve of the second group (case) of the *Replicate #2*.  
+    - *Rep2Group1_Tm*: Calculated Tm of the melting curve of the first group (control) of the *Replicate #2* (TPP only).  
+    - *Rep2Group2_Tm*: Calculated Tm of the melting curve of the second group (case) of the *Replicate #2* (TPP only).   
+    - *Rep2min_Slope*: The minimum slope of the fitted melting curve of the *Replicate #2* (TPP only).  
+- *Melting curve*: Display the fitted melting curve and the original data points.   
 
 
 
