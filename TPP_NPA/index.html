@@ -138,6 +138,16 @@
  Then, select a statistical method for preprocessing the uploaded data with the <em>Analysis</em>
  menu. There are three methods for choosing: TPP method, NPARC method and Distance based
  method. </p>
+<p>Each data table of the input should include the following columns: </p>
+<ul>
+<li><em>Accession</em>: This column is necessary, which is the ID of the protein. It can be uniprot id
+ or/plus gene name or anything else.  </li>
+<li><em>Tx</em>: These columns should include the relative abundances of each protein. The abundances are
+ normalized by dividing the abundances under 37 C. The <em>x</em> in the column name should be replaced 
+ with the temperture, which can be integer or float.   </li>
+</ul>
+<p>If there are values much higher than 1 in your input table, there will be a warning reminding
+ you that the data may be un-normlized. If you are sure that you did, ignore it.</p>
 <h2 id="parameters">Parameters</h2>
 <h3 id="tpp-method">TPP method</h3>
 <p>The workflow of TPP analysis is implemented as described in the Savitski protocol. See the
@@ -190,22 +200,25 @@
 <ul>
 <li><em>Replicate #1 Protein Table</em>: The quantitative table of the protein groups of the uploaded <em>Replicate #1</em>.</li>
 <li><em>Replicate #2 Protein Table</em>: The quantitative table of the protein groups of the uploaded <em>Replicate #2</em>.</li>
-<li><em>Result table</em>: The output of the preprocessing results. Click <em>Save</em> to write to csv file. The explaination of the columns:
-    <em>Score</em>:
-    <em>Rep1pVal (-log10)</em>: 
-    <em>Rep1delta_Tm</em>: 
-    <em>Rep1Group1_R2</em>: 
-    <em>Rep1Group2_R2</em>: 
-    <em>Rep1Group1_Tm</em>: 
-    <em>Rep1Group2_Tm</em>: 
-    <em>Rep1min_Slope</em>: 
-    <em>Rep2pVal (-log10)</em>: 
-    <em>Rep2delta_Tm</em>: 
-    <em>Rep2Group1_R2</em>: 
-    <em>Rep2Group2_R2</em>: 
-    <em>Rep2Group1_Tm</em>: 
-    <em>Rep2Group2_Tm</em>: 
-    <em>Rep2min_Slope</em>: </li>
+<li><em>Result table</em>: The output of the preprocessing results. Click <em>Save</em> to write to csv file. The explaination of the columns:<ul>
+<li><em>Score</em>: The harmonized score combining both the significance (p-value) and the goodness-of-fit (R2).   </li>
+<li><em>Rep1pVal (-log10)</em>: -log10 p-value of the ΔTm (TPP) or other distance metrics (NPA) of the <em>Replicate #1</em>.  </li>
+<li><em>Rep1delta_Tm</em>: Calculated ΔTm of the the <em>Replicate #1</em> (TPP only).  </li>
+<li><em>Rep1Group1_R2</em>: Goodness-of-fit of the melting curve of the first group (control) of the <em>Replicate #1</em>.  </li>
+<li><em>Rep1Group2_R2</em>: Goodness-of-fit of the melting curve of the second group (case) of the <em>Replicate #1</em>.  </li>
+<li><em>Rep1Group1_Tm</em>: Calculated Tm of the melting curve of the first group (control) of the <em>Replicate #1</em> (TPP only).  </li>
+<li><em>Rep1Group2_Tm</em>: Calculated Tm of the melting curve of the second group (case) of the <em>Replicate #1</em> (TPP only).   </li>
+<li><em>Rep1min_Slope</em>: The minimum slope of the fitted melting curve of the <em>Replicate #1</em> (TPP only).  </li>
+<li><em>Rep2pVal (-log10)</em>: -log10 p-value of the ΔTm (TPP) or other distance metrics (NPA) of the <em>Replicate #1</em>.  </li>
+<li><em>Rep2delta_Tm</em>: Calculated ΔTm of the the <em>Replicate #2</em> (TPP only).  </li>
+<li><em>Rep2Group1_R2</em>: Goodness-of-fit of the melting curve of the first group (control) of the <em>Replicate #2</em>.  </li>
+<li><em>Rep2Group2_R2</em>: Goodness-of-fit of the melting curve of the second group (case) of the <em>Replicate #2</em>.  </li>
+<li><em>Rep2Group1_Tm</em>: Calculated Tm of the melting curve of the first group (control) of the <em>Replicate #2</em> (TPP only).  </li>
+<li><em>Rep2Group2_Tm</em>: Calculated Tm of the melting curve of the second group (case) of the <em>Replicate #2</em> (TPP only).   </li>
+<li><em>Rep2min_Slope</em>: The minimum slope of the fitted melting curve of the <em>Replicate #2</em> (TPP only).  </li>
+</ul>
+</li>
+<li><em>Melting curve</em>: Display the fitted melting curve and the original data points.   </li>
 </ul></div>
             </div>
         </div>

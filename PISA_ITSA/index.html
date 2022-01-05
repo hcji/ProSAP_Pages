@@ -108,6 +108,18 @@
             
             <li class="nav-item" data-level="1"><a href="#pisa-and-itsa-analysis" class="nav-link">PISA and iTSA analysis</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#input" class="nav-link">Input</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#parameters" class="nav-link">Parameters</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#display" class="nav-link">Display</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -118,7 +130,22 @@
 <h1 id="pisa-and-itsa-analysis">PISA and iTSA analysis</h1>
 <p>Although the experimental protocol of PISA and iTSA are different, the statistical analysis
  can be similar. ProSAP implements four different statistical methods for this purpose,
- which are t-test, Limma, edgeR, and DESeq2.</p></div>
+ which are t-test, Limma, edgeR, and DESeq2.</p>
+<h2 id="input">Input</h2>
+<p>Data should be upload via <em>Data</em> menu, and select the columns which include the protein abundances.
+ Meanwhile, the data table should also include <em>Accession</em> column, but do <strong>not</strong> select this columns
+ in the selection dialog. This column represents the ID of the protein, which can be uniprot id
+ or/plus gene name or anything else. After input, you should appoint the samples with binary labels.
+ The most simple labels can be 0 and 1.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><em>select methods</em>: Statistical method for identifying the significant proteins.  </li>
+<li><em>Log2 transformed</em>: Whether the data values are transformed.  </li>
+<li><em>Fold change threshold</em>: The threshold of the fold change for target identification.  </li>
+<li><em>P-value threshold</em>: The threshold of the p-value for target identification.    </li>
+<li><em>Balance data</em>: Whether to make the control samples and case samples balanced by randomly downsampling.  </li>
+</ul>
+<h2 id="display">Display</h2></div>
             </div>
         </div>
 
