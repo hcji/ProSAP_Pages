@@ -133,19 +133,27 @@
  which are t-test, Limma, edgeR, and DESeq2.</p>
 <h2 id="input">Input</h2>
 <p>Data should be upload via <em>Data</em> menu, and select the columns which include the protein abundances.
- Meanwhile, the data table should also include <em>Accession</em> column, but do <strong>not</strong> select this columns
+ Meanwhile, the data table should also include <em>Accession</em> column, but do <strong>not</strong> select this column
  in the selection dialog. This column represents the ID of the protein, which can be uniprot id
  or/plus gene name or anything else. After input, you should appoint the samples with binary labels.
  The most simple labels can be 0 and 1.</p>
 <h2 id="parameters">Parameters</h2>
 <ul>
-<li><em>select methods</em>: Statistical method for identifying the significant proteins.  </li>
+<li><em>Select methods</em>: Statistical method for identifying the significant proteins.  </li>
 <li><em>Log2 transformed</em>: Whether the data values are transformed.  </li>
 <li><em>Fold change threshold</em>: The threshold of the fold change for target identification.  </li>
 <li><em>P-value threshold</em>: The threshold of the p-value for target identification.    </li>
-<li><em>Balance data</em>: Whether to make the control samples and case samples balanced by randomly downsampling.  </li>
+<li><em>Balance data</em>: Whether to make the control samples and case samples balanced by randomly undersampling.  </li>
 </ul>
-<h2 id="display">Display</h2></div>
+<h2 id="display">Display</h2>
+<ul>
+<li><em>Data viewer</em>: The data table of the upload data (before processing) and the corresponding result table (after processing).   </li>
+<li><em>Label setting</em>: This panel is used for assiting the users to set the labels of the samples.  </li>
+<li><em>Volcano plot</em>: The volcano plot which displays the target identification results.    </li>
+<li><em>Heatmap</em>: The heatmap which displays the correlation between the samples.  </li>
+<li><em>Barchart</em>: The barchart which displays the distribution of the protein abundances.  </li>
+<li><em>PCA plot</em>: The scatter plot which displays the PCA results, which emphasizes variation and brings out strong pattern of the samples.  </li>
+</ul></div>
             </div>
         </div>
 
