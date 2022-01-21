@@ -1,11 +1,20 @@
 # TPP and NPA analysis
+The TPP/NPA analysis module is designed for classic CETSA experiment for target deconvolution.
+ ProSAP could accepts more or less temperature points but will require minimum six temperature
+ points for inferring melting temperature (Tm) of protein. In this module, users can identify
+ potential targets with parametric TPP analysis or nonparametric analysis (NPA). User can input
+ the preprocessed data file of case and control group, with or without replicates.
+
 
 ## Input
 Data should be upload via *Data* menu, and click *Load proteomics*. You can upload
- multiple files in the same time. Then, please appoint each file as *case sample #1*, 
- *control sample #1*, *case sample #2*, *control sample #2*. The last two of them are 
- not compulsory. However, experimental replicates are highly recommended for reducing
- the false positive. 
+ multiple files in the same time. The data table can be the output of the preprocessing
+ procedure. If not, please make sure the format is consistent to the example files.
+ The data table should also include *Accession* column, but do **not** select this column
+ in the selection dialog. Only choose the columns including protein abundances is OK.
+ Then, please appoint each file as *case sample #1*, *control sample #1*, *case sample #2*, 
+ *control sample #2*. The last two of them are  not compulsory. However, experimental replicates 
+ are highly recommended for reducing the false positive. 
  
 After input, you can check and adjust the parameters with clicking the *Params* button.
  Then, select a statistical method for preprocessing the uploaded data with the *Analysis*

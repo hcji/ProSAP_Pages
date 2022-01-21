@@ -2,7 +2,11 @@
 
 Although the experimental protocol of PISA and iTSA are different, the statistical analysis
  can be similar. ProSAP implements four different statistical methods for this purpose,
- which are t-test, Limma, edgeR, and DESeq2.
+ which are t-test, Limma, edgeR, and DESeq2. Both edgeR and DESeq2 are designed for designed for 
+ transcriptomics with negative binomial distribution assumption but they had been applied for 
+ proteomics in some recent works. So, they are embedded in ProSAP as options for experienced 
+ users, due to their satisfactory performance on the benchmarking datasets. However, whether the 
+ proteomics data are warranted for the mathematical assumption needs further validation.
 
 ## Input
 Data should be upload via *Data* menu, and select the columns which include the protein abundances.
@@ -10,7 +14,6 @@ Data should be upload via *Data* menu, and select the columns which include the 
  in the selection dialog. This column represents the ID of the protein, which can be uniprot id
  or/plus gene name or anything else. After input, you should appoint the samples with binary labels.
  The most simple labels can be 0 and 1.
-
 
 ## Parameters
 - *Select methods*: Statistical method for identifying the significant proteins.  
