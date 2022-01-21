@@ -130,7 +130,11 @@
 <h1 id="pisa-and-itsa-analysis">PISA and iTSA analysis</h1>
 <p>Although the experimental protocol of PISA and iTSA are different, the statistical analysis
  can be similar. ProSAP implements four different statistical methods for this purpose,
- which are t-test, Limma, edgeR, and DESeq2.</p>
+ which are t-test, Limma, edgeR, and DESeq2. Both edgeR and DESeq2 are designed for designed for 
+ transcriptomics with negative binomial distribution assumption but they had been applied for 
+ proteomics in some recent works. So, they are embedded in ProSAP as options for experienced 
+ users, due to their satisfactory performance on the benchmarking datasets. However, whether the 
+ proteomics data are warranted for the mathematical assumption needs further validation.</p>
 <h2 id="input">Input</h2>
 <p>Data should be upload via <em>Data</em> menu, and select the columns which include the protein abundances.
  Meanwhile, the data table should also include <em>Accession</em> column, but do <strong>not</strong> select this column
