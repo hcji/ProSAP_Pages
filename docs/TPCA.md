@@ -17,7 +17,8 @@ Then, please appoint each file as *group #1* and *group #2*. Next, protein compl
  multiple files in the same time, but you can only choose one and click *Confirm* for each analysis. 
  
 After that, you can click *Calc Change*, and the program will run for several miniutes. When finised,
- the protein complexes will be sorted by the 
+ the protein complexes will be sorted by the significant score. You can choose one complex and click
+ *Show Curve* to view the changing in different groups, and save the result table by click *Save Result*.
 
 **In developing**
 
